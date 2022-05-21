@@ -82,12 +82,13 @@ namespace WindowsFormsApp1
             this.правилаToolStripMenuItem.Name = "правилаToolStripMenuItem";
             this.правилаToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.правилаToolStripMenuItem.Text = "Правила";
+            this.правилаToolStripMenuItem.Click += new System.EventHandler(this.правилаToolStripMenuItem_Click);
             // 
             // вихідToolStripMenuItem
             // 
             this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
-            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.вихідToolStripMenuItem.Text = "Вихід";
+            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.вихідToolStripMenuItem.Text = "Про гру";
             this.вихідToolStripMenuItem.Click += new System.EventHandler(this.вихідToolStripMenuItem_Click);
             // 
             // textBox1
@@ -270,7 +271,7 @@ namespace WindowsFormsApp1
             this.name1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.name1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.name1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.name1.Location = new System.Drawing.Point(128, 68);
+            this.name1.Location = new System.Drawing.Point(74, 91);
             this.name1.Name = "name1";
             this.name1.Size = new System.Drawing.Size(51, 20);
             this.name1.TabIndex = 9;
@@ -283,7 +284,7 @@ namespace WindowsFormsApp1
             this.name2.AutoSize = true;
             this.name2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.name2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.name2.Location = new System.Drawing.Point(601, 68);
+            this.name2.Location = new System.Drawing.Point(551, 90);
             this.name2.Name = "name2";
             this.name2.Size = new System.Drawing.Size(53, 20);
             this.name2.TabIndex = 10;
@@ -307,6 +308,7 @@ namespace WindowsFormsApp1
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Гра с кентом";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

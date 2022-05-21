@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form2 : Form
     {
-       
+
         public Form2()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
         private void Form2_Load(object sender, EventArgs e)
         {
 
-            
+
 
 
         }
@@ -51,9 +51,8 @@ namespace WindowsFormsApp1
 
         private void вихідToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Form1 form1 = (Form1)Application.OpenForms[0];
-            form1.Show();
+            
+            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -150,18 +149,20 @@ namespace WindowsFormsApp1
 
                     }
                 }
-            
-            }else {
+
+            }
+            else
+            {
                 MessageBox.Show(
                 "Число повинно бути 4-х значне",
                 "Перший гравець",
                 MessageBoxButtons.OK);
                 return;
-                
-                }
 
-    }
-        
+            }
+
+        }
+
 
 
         private void button2_Click(object sender, EventArgs e)
@@ -197,7 +198,7 @@ namespace WindowsFormsApp1
 
                 }
 
-                
+
 
                 if (countd > 4)
                 {
@@ -281,7 +282,7 @@ namespace WindowsFormsApp1
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -323,6 +324,25 @@ namespace WindowsFormsApp1
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Ви точно бажаете завершити гру та повернутись на головне меню?", "Завершення гри", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+            { 
+                e.Cancel = true; 
+            }
+            else
+            {
+                e.Cancel = false;
+                Form1 form1 = (Form1)Application.OpenForms[0];
+                form1.Show();
+            }
+        }
+
+        private void правилаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Правила про гру Правила про гру Правила про гру Правила про гру Правила про гру Правила про гру", "Правила", MessageBoxButtons.OK, MessageBoxIcon.Information );
         }
     }
 }

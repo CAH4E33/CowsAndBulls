@@ -21,6 +21,11 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (textBox1.TextLength < 1)
+            {
+                MessageBox.Show("Поле з нікнеймом не може бути порожнім!", "Помилка");
+                return;
+            }
 
             if (textBox2.TextLength >= 4)
             {
@@ -65,6 +70,7 @@ namespace WindowsFormsApp1
                 }
 
             }
+            
             else
             {
                 MessageBox.Show(
@@ -104,6 +110,11 @@ namespace WindowsFormsApp1
         {
             if (e.KeyChar != 8 && (e.KeyChar < 48 || e.KeyChar > 57))
                 e.Handled = true;
+        }
+
+        private void Form3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
         }
     }
 }
