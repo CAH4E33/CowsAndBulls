@@ -63,9 +63,9 @@ namespace CowsAndBulls.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap korovy_byki_pastbishche_114536_1920x1080 {
+        internal static System.Drawing.Bitmap cow_2146011 {
             get {
-                object obj = ResourceManager.GetObject("korovy_byki_pastbishche_114536_1920x1080", resourceCulture);
+                object obj = ResourceManager.GetObject("cow-2146011", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
